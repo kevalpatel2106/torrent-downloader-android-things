@@ -45,9 +45,9 @@ dependencies {
     }
 
     //Apache FTP server
-    compile group: 'org.apache.ftpserver', name: 'ftpserver-core', version: '1.1.1'
-    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
-    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
-    compile group: 'org.apache.mina', name: 'mina-core', version: '2.0.16'
-    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.8.2'
+    compile 'org.apache.ftpserver:ftpserver-core:1.1.1'
+    compile 'org.slf4j:slf4j-log4j12:1.7.25'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'org.apache.mina:mina-core:2.0.16'
+    compile 'org.apache.logging.log4j:log4j-core:2.8.2'
 }
