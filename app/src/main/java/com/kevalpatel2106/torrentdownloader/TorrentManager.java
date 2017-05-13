@@ -1,6 +1,7 @@
 package com.kevalpatel2106.torrentdownloader;
 
 import android.content.Context;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -67,15 +68,15 @@ public class TorrentManager {
     }
 
     public static File getOutputDir(Context context) {
-//        File usbDir = new File("/mnt/usb");
-//        if (usbDir.exists() && usbDir.canWrite()) {
-//            Log.d("Output Dir", "External USB");
-//            return usbDir;
-//        } else {
-//        if (!Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).exists())
-//            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).mkdir();
-//        return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-//        }
-        return context.getExternalCacheDir();
+        File usbDir = new File("/mnt/usb");
+        if (usbDir.exists() && usbDir.canWrite()) {
+            Log.d("Output Dir", "External USB");
+            return usbDir;
+        } else {
+            if (!Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).exists())
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).mkdir();
+            return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        }
+//        return context.getExternalCacheDir();
     }
 }

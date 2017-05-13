@@ -1,5 +1,37 @@
-<form method="post" enctype="multipart/form-data">
-    Select File to Upload:<input name="torrentfile" type="file" accept="application/x-bittorrent">
-    <br/>
-    <input type="submit" value="Upload">
+<html lang="en">
+<head>
+    <title>Torrent Downloader</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form class="form-horizontal" method="post" enctype="multipart/form-data">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Torrent Downloader</legend>
+
+        <!-- File Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="torrentfile">Select .torrent file</label>
+            <div class="col-md-4">
+                <input id="torrentfile" name="torrentfile" class="input-file" type="file">
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="submit"></label>
+            <div class="col-md-4">
+                <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+    </fieldset>
 </form>
+</body>
+</html>
